@@ -36,6 +36,18 @@ document.getElementById("add-money-btn").addEventListener("click", function() {
        ${bankAccount}
       ${new Date().toLocaleString()}
      New Balance: ${newBalance}`);
+     
+    //  1-history-container ke dhore niye asbo
+     const history =document.getElementById("history-container");
+    //  2- new div create korbo
+    const newHistory =document.createElement("div");
+    // 3- new div er class add korbo
+    newHistory.innerHTML=`
+     <div class="transaction-card p-5 bg-base-100">
+     Cash in successful from ${bankAccount},acc-no: ${accno} on ${new Date()}        
+    </div>
+    `
+    history.append(newHistory);
 });
     
     // console.log(newBalance);

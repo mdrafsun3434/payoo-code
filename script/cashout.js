@@ -37,6 +37,18 @@ document.getElementById("cashout-btn").addEventListener("click",function(){
         alert("Cashout successful");
         balanceElement.innerText = newBalance;
         console.log("New balance after cashout:",newBalance);
+
+            //  1-history-container ke dhore niye asbo
+     const history =document.getElementById("history-container");
+    //  2- new div create korbo
+    const newHistory =document.createElement("div");
+    // 3- new div er class add korbo
+    newHistory.innerHTML=`
+     <div class="transaction-card p-5 bg-base-100">
+     Cash out ${cashoutAmount} successful from ${cashoutNumber}, on ${new Date()}        
+    </div>
+    `
+    history.append(newHistory);
     }
 
         
