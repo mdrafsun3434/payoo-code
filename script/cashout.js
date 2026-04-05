@@ -3,10 +3,10 @@ document.getElementById("cashout-btn").addEventListener("click",function(){
     const cashoutNumberInput = document.getElementById("cashout-number");
     const cashoutNumber = cashoutNumberInput.value;
     console.log(cashoutNumber);
-    if(cashoutNumber.length! = 11){
-        alert(Invalid agent number);
+    if(cashoutNumber.length != 11){
+        alert("Invalid agent number");
         return;
-    } )
+    } 
 
 
     //2- get the cashout amount --
@@ -22,7 +22,7 @@ document.getElementById("cashout-btn").addEventListener("click",function(){
     console.log(balance);
 
     // 4-Calculate the new balance after cashout
-    const newBalance = parseFloat(balance)-parseFloat(cashoutAmount);
+    const newBalance = Number(balance)-Number(cashoutAmount);
    
 
     if(newBalance < 0){
@@ -37,12 +37,13 @@ document.getElementById("cashout-btn").addEventListener("click",function(){
         alert("Cashout successful");
         balanceElement.innerText = newBalance;
         console.log("New balance after cashout:",newBalance);
+    }
 
         
          
 
 
-    }
+    
     else{
         alert("Invalid cashout pin.");
         return;
