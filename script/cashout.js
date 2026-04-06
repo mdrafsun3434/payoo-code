@@ -38,7 +38,7 @@ document.getElementById("cashout-btn").addEventListener("click",function(){
         balanceElement.innerText = newBalance;
         console.log("New balance after cashout:",newBalance);
 
-            //  1-history-container ke dhore niye asbo
+    //  1-history-container ke dhore niye asbo
      const history =document.getElementById("history-container");
     //  2- new div create korbo
     const newHistory =document.createElement("div");
